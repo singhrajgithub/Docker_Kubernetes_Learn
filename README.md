@@ -13,6 +13,17 @@
  1) Standardized Packaging -- same packaging for all types of applications i.e. Java , Python , JS.
  2) Multi Platform Support -- local machine , Cloud ,data center.
  3) Lightweight and Isolation -- containers are lightweight compared to VMs and are isolated from one another.
- 4) ![Why_Docker](https://user-images.githubusercontent.com/24280813/155869456-9d3cc361-5e51-4be1-87b0-0445ed7ff591.JPG)
- 5) Docker Deployment Architecture 
+ 4) Docker Deployment Architecture 
+
+![Why_Docker](https://user-images.githubusercontent.com/24280813/155869456-9d3cc361-5e51-4be1-87b0-0445ed7ff591.JPG)
+
 ![Docker_Deployment](https://user-images.githubusercontent.com/24280813/155869518-4d442d59-57ea-432c-9c8c-08e549abd5bd.JPG)
+
+# Useful Docker Commands 
+
+1) docker images
+2) docker container ls
+3) docker ps -aq
+4) docker container remove [container ID]
+5) docker build -t hello-python:0.0.1.rel . [ build docker image locally for python application]
+6) 
