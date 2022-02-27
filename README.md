@@ -59,6 +59,11 @@
 36) docker image remove mysql
 37) docker image remove hello-world-java:0.0.1.RELEASE
 38) docker container rm 3e657ae9bd16
+39) docker build -t rajsingh90/hello-node:0.0.1.rel .  --> creating nodejs image locally 
+40) docker run -p 5001:5000 -d rajsingh90/hello-node:0.0.1.rel  --> running nodejs container with tag rajsingh90
+41) 
+42) 
+
 
 # 
 
