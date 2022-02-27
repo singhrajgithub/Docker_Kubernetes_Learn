@@ -75,7 +75,7 @@ RUN npm install
 EXPOSE 5000
 CMD node index.js
 
-# Instead of copying whole codebase in step2 we can copy the package.json file which is not going to change very often . This will improve the performance of image creation time. Same thing can be done for python , java etc as well.
+Instead of copying whole codebase in step2 we can copy the package.json file which is not going to change very often . This will improve the performance of image creation time. Same thing can be done for python , java etc as well.
 
 FROM node:8.16.1-alpine
 WORKDIR /app
@@ -87,5 +87,5 @@ CMD node index.js
 
 # ENTRYPOINT VS CMD
 
-CMD --> Command Line arguments will override the CMD in dockerfile and hence your application might not start.
-ENTRYPOINT --> It can not be overridden via command line parameter however you can overridden by passing argument --entrypoint via cmd. It's quite complex to override the entrypoints although.
+1) CMD --> Command Line arguments will override the CMD in dockerfile and hence your application might not start.
+2) ENTRYPOINT --> It can not be overridden via command line parameter however you can overridden by passing argument --entrypoint via cmd. It's quite complex to override the entrypoints although.
