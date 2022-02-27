@@ -68,22 +68,22 @@
 1) Moving steps up which are not changing or doesnot impact on any image file.
 
 for example :
-FROM node:8.16.1-alpine
-WORKDIR /app
-COPY . /app
-RUN npm install
-EXPOSE 5000
-CMD node index.js
+FROM node:8.16.1-alpine <br>
+WORKDIR /app   <br>
+COPY . /app  <br>
+RUN npm install  <br>
+EXPOSE 5000  <br>
+CMD node index.js  <br>
 
 Instead of copying whole codebase in step2 we can copy the package.json file which is not going to change very often . This will improve the performance of image creation time. Same thing can be done for python , java etc as well.
 
-FROM node:8.16.1-alpine
-WORKDIR /app
-COPY package.json /app
-RUN npm install
-EXPOSE 5000
-COPY . /app
-CMD node index.js
+FROM node:8.16.1-alpine <br> 
+WORKDIR /app  <br>
+COPY package.json /app  <br>
+RUN npm install  <br>
+EXPOSE 5000  <br>
+COPY . /app  <br>
+CMD node index.js  <br>
 
 # ENTRYPOINT VS CMD
 
