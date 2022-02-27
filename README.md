@@ -61,10 +61,31 @@
 38) docker container rm 3e657ae9bd16
 39) docker build -t rajsingh90/hello-node:0.0.1.rel .  --> creating nodejs image locally 
 40) docker run -p 5001:5000 -d rajsingh90/hello-node:0.0.1.rel  --> running nodejs container with tag rajsingh90
-41) 
-42) 
+41) docker push rajsingh90/hello-python:0.0.1.rel
 
 
-# 
+# Creating Efficient Docker Images
+1) Moving steps up which are not changing or doesnot impact on any image file.
 
+for example :
+FROM node:8.16.1-alpine
+WORKDIR /app
+COPY . /app
+RUN npm install
+EXPOSE 5000
+CMD node index.js
 
+# Instead of copying whole codebase in step2 we can copy the package.json file which is not going to change very often . This will improve the performance of image creation time. Same thing can be done for python , java etc as well.
+
+FROM node:8.16.1-alpine
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+EXPOSE 5000
+COPY . /app
+CMD node index.js
+
+# ENTRYPOINT VS CMD
+
+CMD --> Command Line arguments will override the CMD in dockerfile and hence your application might not start.
+ENTRYPOINT --> It can not be overridden via command line parameter however you can overridden by passing argument --entrypoint via cmd. It's quite complex to override the entrypoints although.
