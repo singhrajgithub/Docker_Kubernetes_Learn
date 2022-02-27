@@ -57,5 +57,9 @@
 34) docker image history 100229ba687e
 35) docker image inspect 100229ba687e
 36) docker image remove mysql
-37) docker image remove in28min/hello-world-java:0.0.1.RELEASE
+37) docker image remove hello-world-java:0.0.1.RELEASE
 38) docker container rm 3e657ae9bd16
+
+# 
+
+
