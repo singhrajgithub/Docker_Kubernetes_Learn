@@ -94,10 +94,17 @@ CMD node index.js  <br>
 1) CMD --> Command Line arguments will override the CMD in dockerfile and hence your application might not start.
 2) ENTRYPOINT --> It can not be overridden via command line parameter however you can overridden by passing argument --entrypoint via cmd. It's quite complex to override the entrypoints although.
 
-# how to configure environment variable to solve connection problem of localhost where two containers on bridged network cannot connect with each other.
+# How to configure environment variable to solve connection problem of localhost where two containers on bridged network cannot connect with each other.
 1) use --env flag to configure 
 2) use --link to configure the link
 
 # How to use custom Networking connect microservices 
 
-1) 
+1) Host --> When we select host then container won't have it's own network and will work directly on host network itself. Host networking option works on Linux Hosts , it doesnot work on docker desktop for windows and mac etc.
+2) none Network --> Means no netowkring at all.
+3) Bridge Network --> already present
+4) CreateCustom Network --> we can create custom network for our need. We can use **docker network create [Network name]** 
+
+Command to use custom network while running 
+docker run -d -p [exposed port : Docker Port] --name=[container Name] --network=[network name]
+
