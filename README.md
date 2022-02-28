@@ -112,5 +112,9 @@ docker run -d -p [exposed port : Docker Port] --name=[container Name] --network=
 
 Tool for defining and running multi container Docker applications , with compose you can use a YAML file to configure your application services.
 
-
-
+1) docker-compose up -d  [ Running multiple containers ]
+2) docker-compose down
+3) docker system prune -a
+4) docker-compose config [ help in figuring out error in yaml file]
+5) docker-compose top
+6) 
