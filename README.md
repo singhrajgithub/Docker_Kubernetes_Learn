@@ -62,6 +62,10 @@
 39) docker build -t rajsingh90/hello-node:0.0.1.rel .  --> creating nodejs image locally 
 40) docker run -p 5001:5000 -d rajsingh90/hello-node:0.0.1.rel  --> running nodejs container with tag rajsingh90
 41) docker push rajsingh90/hello-python:0.0.1.rel
+42) docker network ls
+43) docker network inspect bridge
+44) docker stop [ container name] 
+45) 
 
 
 # Creating Efficient Docker Images
@@ -89,3 +93,11 @@ CMD node index.js  <br>
 
 1) CMD --> Command Line arguments will override the CMD in dockerfile and hence your application might not start.
 2) ENTRYPOINT --> It can not be overridden via command line parameter however you can overridden by passing argument --entrypoint via cmd. It's quite complex to override the entrypoints although.
+
+# how to configure environment variable to solve connection problem of localhost where two containers on bridged network cannot connect with each other.
+1) use --env flag to configure 
+2) use --link to configure the link
+
+# How to use custom Networking connect microservices 
+
+1) 
