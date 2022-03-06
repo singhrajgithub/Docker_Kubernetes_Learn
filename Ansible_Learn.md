@@ -51,10 +51,17 @@
   
   Setup module is used in Ansible to get facts.
   
-# Create Custom Facts
+  Facts :
+  default facts
+  custom facts --> used to get extra information about your managed Nodes.
+   used defined facts
+  
+# Create Custom Facts / Steps to create Custom Facts  
+  
+  ![Steps_CreateCustomFacts](https://user-images.githubusercontent.com/24280813/156933810-35d4d209-6134-4f19-8dfc-b0c924bf0112.JPG)
   
   
-  
+
   
   
   
