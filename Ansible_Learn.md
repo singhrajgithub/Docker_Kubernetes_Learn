@@ -28,7 +28,28 @@
 5) ansible [group] -m file -a "path=destination directory state=absent"
 
   
+# Ansible Facts , Module and Variables
+  
+  Ansible Modules --> discrete units of code that can be used from command line or in playbook task
+  ansible executes each module usually on remote managed node and collects return values.
+  
+  setup module-- > Used to get Facts while executing ansible playbooks , Automatically called by the clients.
+  
+  ansible [group] -m setup --> complete information of remote machine.
+  
+  ansible [group] -m setup -a "filter=ansible_memory_mb"
+  
+  ansible-doc -l | grep gcp
+  
+  ansible-doc module-name
+  
+  
+  
+  
 
+
+  
+  
   
   
   
