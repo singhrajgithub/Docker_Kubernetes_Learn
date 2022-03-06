@@ -44,6 +44,18 @@
   ansible-doc module-name
   
   
+  # Ansible Facts
+  
+  Facts are use dot get information about the Ansible client.
+  gathered information is called facts or variables .
+  
+  Setup module is used in Ansible to get facts.
+  
+# Create Custom Facts
+  
+  
+  
+  
   
   
 
